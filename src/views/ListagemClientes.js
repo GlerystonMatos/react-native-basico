@@ -1,6 +1,6 @@
 import React from 'react';
-import { View } from 'react-native';
 import Header from '../components/Header';
+import { View, StyleSheet } from 'react-native';
 import StatusBar from '../components/StatusBar';
 import FlatListClientes from '../components/FlatListUsuarios';
 
@@ -26,28 +26,28 @@ export default class ListagemClientes extends React.Component {
                     estado: 'CE'
                 },
                 {
-                    nome: 'Lola',
+                    nome: 'Lola Matos',
                     idade: 10,
                     status: 'Ativo',
                     cidade: 'Fortaleza',
                     estado: 'CE'
                 },
                 {
-                    nome: 'Snoopy',
+                    nome: 'Snoopy Matos',
                     idade: 18,
                     status: 'Inativo',
                     cidade: 'Fortaleza',
                     estado: 'CE'
                 },
                 {
-                    nome: 'Mel',
+                    nome: 'Mel Matos',
                     idade: 2,
                     status: 'Inativo',
                     cidade: 'Fortaleza',
                     estado: 'CE'
                 },
                 {
-                    nome: 'Dory',
+                    nome: 'Dory Matos',
                     idade: 1,
                     status: 'Ativo',
                     cidade: 'Fortaleza',
@@ -59,7 +59,7 @@ export default class ListagemClientes extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={estilo.ViewPrincipal}>
                 <StatusBar corFundo='red' />
                 <Header titulo='Listagem de Clientes' />
                 <FlatListClientes data={this.state.dadosUsuario} />
@@ -67,3 +67,9 @@ export default class ListagemClientes extends React.Component {
         )
     }
 }
+
+const estilo = StyleSheet.create({
+    ViewPrincipal: {
+        flex: 1
+    }
+})
